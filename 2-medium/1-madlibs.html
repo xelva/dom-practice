@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadLib</title>
+</head>
+<body>
+  <!-- HTML goes here -->
+  <h1>MadLib</h1>
+
+  <form id="madLibForm" style="display: block;">
+    <p class="form-group">
+      <label for="nameField">Name</label>
+      <br>
+      <input type="text" name="name" id="nameField">
+    </p>
+    <button type="submit">Do the MadLib!</button>
+  </form>
+  
+  <div id="madLibStory" style="display: none">
+    <h2>Hungry Hungry <span class="noun1">__________</span></h2>
+    <p>There once was a <span class="adjective1">__________</span> <span class="noun1">__________</span> named <span class="name1">__________</span> who did not know how to <span class="verb1">__________</span>. They wanted to <span class="verb1">__________</span> so badly that they decided to eat many <span class="noun2">__________</span>.</p>
+    <p>After eating all of the <span class="noun2">__________</span> in the entire <span class="location">__________</span>, <span class="name1">__________</span>, they grew to <span class="number1">__________</span> tall, and then decided that they didn't need to <span class="verb1">__________</span>, they just needed to accept that this was their life now.</p>
+
+    <button type="button" id="restart">Restart!</button>
+  </div>
+
+  <script>
+    // JavaScript goes here
+    const nameSpan = document.querySelector('.name1');
+    const submitButton = document.querySelector('#madLibForm button');
+    const nameField = document.querySelector('#nameField');
+    const story = document.querySelector('#story');
+
+    submitButton.addEventListener('click', function(event) {
+      event.preventDefault();
+      nameSpan.innerText = nameField.value;
+
+      story.style.display = 'block';
+    })
+  </script>
+</body>
+</html>
