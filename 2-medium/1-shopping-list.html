@@ -9,12 +9,19 @@
   <!-- HTML goes here -->
   <h1>Things to Buy</h1>
 
-  <ul>
+  <ul id="shoppingList">
     <li>Waffles</li>
     <li>Pancakes</li>
     <li>Bacon</li>
     <li>Eggs</li>
   </ul>
+
+  <form id="newItem">
+    <label for="item">Add New Item</label>
+    <br>
+    <input type="text" name="item" id="item">
+    <button type="submit">Add</button>
+  </form>
 
   <script>
     // JavaScript goes here
