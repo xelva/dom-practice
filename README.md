@@ -6,13 +6,13 @@ This repo is divided into folders. Following the instructions on the learning po
 
 ### Log Button Click
 
-Create a button that logs "Button Pressed" to the console when clicked.
+Create a button that displays and alert with the text "Button Pressed" when clicked.
 
 ### Log Button Pressed
 
-Create a button that logs "You Left Clicked" to the console when clicked.
+Create a button that displays an alert with the X and Y coordinates of the mouse when clicked.
 
-- Hint: You will need to access the `event` object.
+- Hint: You will need to access the `event` object and access the `screenX` and `screenY` properties
 
 ### Add a scroll event
 
