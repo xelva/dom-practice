@@ -4,11 +4,11 @@ This repo is divided into folders. Following the instructions on the learning po
 
 ## Small
 
-### Log Button Click
+### Button Click Alert
 
 Create a button that displays and alert with the text "Button Pressed" when clicked.
 
-### Log Button Pressed
+### Show Mouse Position
 
 Create a button that displays an alert with the X and Y coordinates of the mouse when clicked.
 
@@ -16,9 +16,9 @@ Create a button that displays an alert with the X and Y coordinates of the mouse
 
 ### Add a scroll event
 
-Add an event to log "You Change the size of the Window!" to the console when a user resizes the browser. The following code is how you would add a 'resize' event. You can use this as a prompt to start the 'scroll' event.
+Add an event to log "You scrolled the page" to the console when a user scrolls the page. The following code is how you would add a 'resize' event. You can use this as a prompt to start the 'scroll' event.
 
-> **Note**: You may also want to research a 'debounce' function. Running an event handler every time the page scrolls can be a heavy procedure and a 'debounce' function will help with that.
+> **Bonus**: See how many times the console message displays? You may also want to research a 'debounce' function. Running an event handler every time the page scrolls can be a memory intensive procedure and a 'debounce' function will help with that.
 
 ``` js
 <script>
