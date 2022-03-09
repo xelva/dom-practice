@@ -7,10 +7,14 @@
 </head>
 <body>
   <!-- HTML goes here -->
-
+  <button class="buttonLeft">Click me</button>
   <script>
     // JavaScript goes here
-
+    document.addEventListener('click', function(evt){
+        if(evt.target.classList.contains('buttonLeft')) {
+            console.log('You Left Clicked');
+        }
+    })
   </script>
 </body>
 </html>
