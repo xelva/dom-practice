@@ -11,11 +11,36 @@
 
   <form id="madLibForm" style="display: block;">
     <p class="form-group">
-      <label for="animal">Animal</label>
+      <label for="animal">animal</label>
       <br>
       <input type="text" name="animal" id="animal">
+      <br><br>
+      <label for="country">country</label>
+      <br>
+      <input type="text" name="country" id="country">
+      <br><br>
+      <label for="pluralNoun">plural noun</label>
+      <br>
+      <input type="text" name="pluralNoun" id="pluralNoun">
+      <br><br>
+      <label for="food">food</label>
+      <br>
+      <input type="text" name="food" id="food">
+      <br><br>
+      <label for="device">device</label>
+      <br>
+      <input type="text" name="device" id="device">
+      <br><br>
+      <label for="noun">noun</label>
+      <br>
+      <input type="text" name="noun" id="noun">
+      <br><br>
+      <label for="adjective">adjective</label>
+      <br>
+      <input type="text" name="adjective" id="adjective">
+
     </p>
-    <button type="submit">Do the MadLib!</button>
+    <button type="button" id="mad">Do the MadLib!</button>
   </form>
   
   <div id="madLibStory" style="display: none">
@@ -36,11 +61,40 @@
     </p>
 
     <button type="button" id="restart">Restart!</button>
+    
   </div>
 
   <script>
     // JavaScript goes here
+    document.getElementById('mad').addEventListener('click', function(){
+      document.getElementById('madLibStory').style.display = 'block';
+      popEach(document.querySelectorAll('.animal'), document.getElementById('animal').value);
+      popEach(document.querySelectorAll('.country'), document.getElementById('country').value);
+      popEach(document.querySelectorAll('.pluralNoun'), document.getElementById('pluralNoun').value);
+      popEach(document.querySelectorAll('.food'), document.getElementById('food').value);
+      popEach(document.querySelectorAll('.device'), document.getElementById('device').value);
+      popEach(document.querySelectorAll('.noun'), document.getElementById('noun').value);
+      popEach(document.querySelectorAll('.adjective'), document.getElementById('adjective').value);
+      document.getElementById('madLibForm').style.display = 'none';
+    });
 
+    //funtion to populate the text for each class instance
+    const popEach = (className, userValue) => {
+        className.forEach(function(item) {
+          item.innerText = userValue;
+        });
+      };
+    
   </script>
+  
+  <script>
+    //script for the reset button
+    document.getElementById('restart').addEventListener('click', function(){
+      document.getElementById('madLibStory').style.display = 'none';
+      document.getElementById('madLibForm').style.display = 'block';
+      document.getElementById('madLibForm').reset();
+    });
+  </script>
+  
 </body>
 </html>

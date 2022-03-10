@@ -20,11 +20,37 @@
     <label for="item">Add New Item</label>
     <br>
     <input type="text" name="item" id="item">
-    <button type="submit" id="addButton">Add</button>
+    <button type="button" class="addButton" id="addButton">Add</button>
   </form>
 
   <script>
     // JavaScript goes here
+    document.getElementById('addButton').addEventListener('click', function() {
+          message = document.getElementById('item').value;
+          list = document.getElementById('shoppingList');
+          getMessage(list, message);
+      });
+    
+    //function to add items to the list with remove buttons
+    const getMessage = (element, message) => {
+          const messageElement = document.createElement('li');
+          messageElement.textContent = message;
+
+          //create delete button
+          const deleteButton = document.createElement('button');
+          deleteButton.innerText = 'Delete';
+          
+          //listen for delete button
+          deleteButton.addEventListener('click', event => element.removeChild(messageElement));
+
+          messageElement.appendChild(deleteButton);
+          element.appendChild(messageElement);
+          
+          
+          
+        }
+
+    //function to remove item
     
   </script>
 </body>
